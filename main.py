@@ -20,10 +20,11 @@ def count_letters(text):
     letter_count = {}
     for word in text_split:
         for i in word:
-            if i not in letter_count:
-                letter_count[i] = 1
-            else:
-                letter_count[i] += 1
+            if i.isalpha():
+                if i not in letter_count:
+                    letter_count[i] = 1
+                else:
+                    letter_count[i] += 1
     return letter_count
 
 def order_dict(dictionary):
